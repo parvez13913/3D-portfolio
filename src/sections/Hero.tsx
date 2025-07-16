@@ -1,5 +1,9 @@
+"use client";
+import CanvasLoader from "@/components/CanvasLoader";
+import HackerRoom from "@/components/HackerRom";
 import { PerspectiveCamera } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
+import { Suspense } from "react";
 
 const Hero = () => {
   return (
@@ -15,7 +19,16 @@ const Hero = () => {
 
       <div className="w-full h-full absolute inset-0">
         <Canvas className="w-full h-full">
-          <PerspectiveCamera makeDefault position={[0, 0, 30]} />
+          <Suspense fallback={<CanvasLoader />}>
+            <PerspectiveCamera makeDefault position={[0, 0, 30]} />
+            <HackerRoom
+              scale={0.05}
+              position={[0, 0, 0]}
+              rotation={[0, 0, 0]}
+            />
+            <ambientLight intensity={1} />
+            <directionalLight position={[10, 10, 10]} intensity={0.5} />
+          </Suspense>
         </Canvas>
       </div>
     </section>

@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@react-three/drei": "^10.5.0",
+    "@react-three/eslint-plugin": "^0.1.2",
     "@react-three/fiber": "^9.2.0",
     "next": "15.3.5",
     "react": "^19.0.0",
