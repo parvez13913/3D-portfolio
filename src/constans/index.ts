@@ -246,11 +246,20 @@ export const myProjects = [
   },
 ];
 
+type Vector3 = [number, number, number];
+
 export const calculateSizes = (
   isSmall: boolean,
   isMobile: boolean,
   isTablet: boolean
-) => {
+): {
+  deskScale: number;
+  deskPosition: Vector3;
+  cubePosition: Vector3;
+  reactLogoPosition: Vector3;
+  ringPosition: Vector3;
+  targetPosition: Vector3;
+} => {
   return {
     deskScale: isSmall ? 0.05 : isMobile ? 0.06 : 0.065,
     deskPosition: isMobile ? [0.5, -4.5, 0] : [0.25, -5.5, 0],
@@ -274,7 +283,7 @@ export const calculateSizes = (
       ? [-10, 10, 0]
       : isTablet
       ? [-12, 10, 0]
-      : [-60, 21, 0],
+      : [-24, 10, 0],
     targetPosition: isSmall
       ? [-5, -10, -10]
       : isMobile
