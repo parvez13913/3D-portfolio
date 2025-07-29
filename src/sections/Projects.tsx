@@ -1,18 +1,24 @@
 "use client";
 
+import CanvasLoader from "@/components/CanvasLoader";
+import { DemoComputer } from "@/components/DemoComputer";
 import { myProjects } from "@/constans";
+import { Center, OrbitControls } from "@react-three/drei";
+import { Canvas } from "@react-three/fiber";
 import Image from "next/image";
-import { useState } from "react";
+import { Suspense, useState } from "react";
 
 const Projects = () => {
   const [selectedProjectIndex, setSelectedProjectIndex] = useState(0);
-  const currentProject = myProjects[0];
-  const handleNavigation = (direction) => {
+  const currentProject = myProjects[selectedProjectIndex];
+  const handleNavigation = (direction: "previous" | "next") => {
+    const projectCount = myProjects.length;
+
     setSelectedProjectIndex((prevIndex) => {
       if (direction === "previous") {
         return prevIndex === 0 ? projectCount - 1 : prevIndex - 1;
       } else {
-        return prevIndex === projectCount - 1 ? 0 : prevIndex - 1;
+        return prevIndex === projectCount - 1 ? 0 : prevIndex + 1;
       }
     });
   };
@@ -55,7 +61,10 @@ const Projects = () => {
           <div className="flex items-center justify-between flex-wrap gap-5">
             <div className="flex items-center gap-3">
               {currentProject.tags.map((tag, index) => (
-                <div key={index}>
+                <div
+                  key={index}
+                  className=" w-10 h-10 rounded-md p-2 bg-neutral-100 bg-opacity-10 backdrop-filter backdrop-blur-lg flex justify-center items-center"
+                >
                   <img src={tag?.path} alt={tag?.name} />
                 </div>
               ))}
@@ -78,10 +87,45 @@ const Projects = () => {
 
           <div className="flex justify-between items-center mt-7">
             <button
-              className="arrow-btn"
+              className="w-10 h-10 p-3 cursor-pointer active:scale-95 transition-all rounded-full arrow-gradient"
               onClick={() => handleNavigation("previous")}
-            ></button>
+            >
+              <Image
+                src="/assets/left-arrow.png"
+                alt="left-arrow"
+                className="h-4 w-4"
+                height={4}
+                width={4}
+              />
+            </button>
+            <button
+              className="w-10 h-10 p-3 cursor-pointer active:scale-95 transition-all rounded-full arrow-gradient"
+              onClick={() => handleNavigation("next")}
+            >
+              <Image
+                src="/assets/right-arrow.png"
+                alt="right-arrow"
+                className="h-4 w-4"
+                height={4}
+                width={4}
+              />
+            </button>
           </div>
+        </div>
+
+        <div className="border border-black-300 bg-black-200 rounded-lg h-96 md:h-full">
+          <Canvas>
+            <ambientLight intensity={Math.PI / 2} />
+            <pointLight position={[10, 10, 5]} />
+            <Center>
+              <Suspense fallback={<CanvasLoader />}>
+                <group scale={2} position={[0, -3, 0]} rotation={[0, -0.1, 0]}>
+                  <DemoComputer texture={currentProject.texture} />
+                </group>
+              </Suspense>
+            </Center>
+            <OrbitControls maxPolarAngle={Math.PI / 2} enableZoom={false} />
+          </Canvas>
         </div>
       </div>
     </section>
