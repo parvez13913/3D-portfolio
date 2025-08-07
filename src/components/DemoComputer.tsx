@@ -20,7 +20,7 @@ export function DemoComputer(props: any) {
   }, [txt]);
 
   useGSAP(() => {
-    gsap.from(group.current.rotation, {
+    gsap.from(group.current, {
       y: Math.PI / 2,
       duration: 1,
       ease: "power3.out",
