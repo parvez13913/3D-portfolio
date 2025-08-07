@@ -15,7 +15,7 @@ const NavItems = () => {
         >
           <Link
             href={href}
-            className="text-lg md:text-base hover:text-white transition-colors"
+            className="text-lg md:text-base hover:text-white transition-colors font-serif"
             onClick={() => {}}
           >
             {name}
@@ -35,7 +35,7 @@ const Navbar = () => {
         <div className="flex justify-between items-center py-5 mx-auto c-space">
           <Link
             href="/"
-            className="text-neutral-400 text-xl hover:text-white transition-colors"
+            className="text-neutral-400 text-xl hover:text-white transition-colors font-serif"
           >
             Parvez
           </Link>

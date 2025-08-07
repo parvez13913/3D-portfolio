@@ -1,4 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
+
+"use client";
+
 import { useGSAP } from "@gsap/react";
 import { Float, useGLTF, useTexture } from "@react-three/drei";
 import gsap from "gsap";
