@@ -102,6 +102,7 @@ export const calculateSizes = (
   deskPosition: Vector3;
   cubePosition: Vector3;
   reactLogoPosition: Vector3;
+  ringPosition: Vector3;
   targetPosition: Vector3;
 } => {
   return {
@@ -121,6 +122,13 @@ export const calculateSizes = (
       : isTablet
       ? [5, 4, 0]
       : [10, 3, 0],
+    ringPosition: isSmall
+      ? [-5, 7, 0]
+      : isMobile
+      ? [-10, 10, 0]
+      : isTablet
+      ? [-12, 10, 0]
+      : [-50, 20, 0],
     targetPosition: isSmall
       ? [-5, -10, -10]
       : isMobile

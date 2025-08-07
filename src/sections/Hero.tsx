@@ -5,6 +5,7 @@ import Cube from "@/components/Cube";
 import HackerRoom from "@/components/HackerRom";
 import HeroCamera from "@/components/HeroCamera";
 import ReactLogo from "@/components/ReactLogo";
+import Rings from "@/components/Rings";
 import Target from "@/components/Target";
 import { calculateSizes } from "@/constans";
 import { PerspectiveCamera } from "@react-three/drei";
@@ -44,6 +45,7 @@ const Hero = () => {
             <group>
               <Target position={sizes.targetPosition} />
               <ReactLogo position={sizes.reactLogoPosition} />
+              <Rings position={sizes.ringPosition} />
               <Cube position={sizes.cubePosition} />
             </group>
 

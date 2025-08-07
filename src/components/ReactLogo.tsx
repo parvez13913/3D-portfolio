@@ -1,11 +1,10 @@
-"use client";
-
 /* eslint-disable @typescript-eslint/no-explicit-any */
+"use client";
 
 import { Float, useGLTF } from "@react-three/drei";
 
 const ReactLogo = (props: any) => {
-  const { nodes, materials } = useGLTF("models/react.glb") as any;
+  const { nodes, materials } = useGLTF("/models/react.glb") as any;
 
   return (
     <Float floatIntensity={1}>
@@ -22,6 +21,6 @@ const ReactLogo = (props: any) => {
   );
 };
 
-useGLTF.preload("models/react.glb");
+useGLTF.preload("/models/react.glb");
 
 export default ReactLogo;
