@@ -10,7 +10,7 @@ const Client = () => {
         {clientReviews.map(({ id, img, review, name, position }) => (
           <div
             key={id}
-            className="rounded-lg md:p-10 p-5 col-span-1 bg-black-300 bg-opacity-50"
+            className="rounded-lg md:p-10 p-5 col-span-1 bg-black bg-opacity-50"
           >
             <div>
               <p className="text-white font-light font-serif">{review}</p>
