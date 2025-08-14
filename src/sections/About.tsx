@@ -96,7 +96,7 @@ const About = () => {
                 I&apos;m based in Jhenaidah, Bangladesh, and open to remote work
                 worldwide.
               </p>
-              <a href="contact">
+              <a href="#contact">
                 <Button
                   name="Contact Me"
                   isBeam
