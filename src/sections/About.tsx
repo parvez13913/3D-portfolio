@@ -96,11 +96,13 @@ const About = () => {
                 I&apos;m based in Jhenaidah, Bangladesh, and open to remote work
                 worldwide.
               </p>
-              <Button
-                name="Contact Me"
-                isBeam
-                containerClass="w-full mt-10 bg-black/90"
-              />
+              <a href="contact">
+                <Button
+                  name="Contact Me"
+                  isBeam
+                  containerClass="w-full mt-10 bg-black/90"
+                />
+              </a>
             </div>
           </div>
         </div>
