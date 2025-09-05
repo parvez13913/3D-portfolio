@@ -23,5 +23,5 @@ It showcases my projects, skills, and experience as a web developer.
 
 - **Portfolio:** [Portfolio](https://dev-portfolio-tau-five.vercel.app/)
 - **Email:** parvezz13913@email.com
-- **LinkedIn:** [linkedin.com/in/yourname](https://linkedin.com/in/yourname)
-- **GitHub:** [github.com/yourusername](https://github.com/yourusername)
+- **LinkedIn:** [linkedin.com](https://www.linkedin.com/in/parvez13913/)
+- **GitHub:** [github.com](https://github.com/parvez13913/)
