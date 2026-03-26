@@ -1,41 +1,44 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 
+import { useGSAP } from "@gsap/react";
 import { useGLTF } from "@react-three/drei";
 import gsap from "gsap";
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import * as THREE from "three";
 
 const Target = (props: any) => {
   const targetRef = useRef<THREE.Group>(null);
-  const { scene } = useGLTF(
-    "https://vazxmixjsiawhamofees.supabase.co/storage/v1/object/public/models/target-stand/model.gltf"
-  );
 
-  useEffect(() => {
-    if (!targetRef.current) return;
+  const { scene } = useGLTF("/models/cube.glb");
 
-    const ctx = gsap.context(() => {
-      gsap.to(targetRef.current!.position, {
-        y: targetRef.current!.position.y + 0.5,
+  useGSAP(
+    () => {
+      if (!targetRef.current) return;
+
+      gsap.to(targetRef.current.position, {
+        y: targetRef.current.position.y + 0.5,
         duration: 1.5,
         repeat: -1,
         yoyo: true,
+        ease: "power1.inOut",
       });
-    });
-
-    return () => ctx.revert();
-  }, [scene]);
+    },
+    { scope: targetRef },
+  );
 
   return (
     <primitive
-      object={scene}
+      {...props}
       ref={targetRef}
+      object={scene}
       rotation={[0, Math.PI / 5, 0]}
       scale={1.5}
-      {...props}
     />
   );
 };
+
+// Also update the preload to point locally
+useGLTF.preload("/models/target.gltf");
 
 export default Target;

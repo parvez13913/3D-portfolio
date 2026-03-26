@@ -1,12 +1,9 @@
 "use client";
 import Button from "@/components/Button";
-import CanvasLoader from "@/components/CanvasLoader";
 import Cube from "@/components/Cube";
 import HackerRoom from "@/components/HackerRom";
 import HeroCamera from "@/components/HeroCamera";
 import ReactLogo from "@/components/ReactLogo";
-import Rings from "@/components/Rings";
-import Target from "@/components/Target";
 import { calculateSizes } from "@/constans";
 import { PerspectiveCamera } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
@@ -31,9 +28,10 @@ const Hero = () => {
 
       <div className="w-full h-full absolute inset-0">
         <Canvas className="w-full h-full">
-          <Suspense fallback={<CanvasLoader />}>
+          <Suspense fallback={null}>
             <PerspectiveCamera makeDefault position={[0, 0, 30]} />
 
+            {/* Main Hero Group */}
             <HeroCamera isMobile={isMobile}>
               <HackerRoom
                 scale={sizes.deskScale}
@@ -42,10 +40,11 @@ const Hero = () => {
               />
             </HeroCamera>
 
+            {/* Floating Elements Group */}
             <group>
-              <Target position={sizes.targetPosition} />
+              {/* <Target position={sizes.targetPosition} /> */}
               <ReactLogo position={sizes.reactLogoPosition} />
-              <Rings position={sizes.ringPosition} />
+              {/* <Rings position={sizes.ringPosition} /> */}
               <Cube position={sizes.cubePosition} />
             </group>
 

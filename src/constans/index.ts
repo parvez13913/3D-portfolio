@@ -89,6 +89,70 @@ export const myProjects = [
       },
     ],
   },
+  {
+    title: "Prevailingwages",
+    desc: "A web platform for storing, managing, and downloading wage-related data efficiently.",
+    subdesc:
+      "Built as a unique Software-as-a-Service app with Next.js, Tailwind CSS, TypeScript, and Convex, Prevailingwages is designed for optimal performance and scalability.",
+    href: "https://prevailingwages.com/home",
+    texture: "/textures/project/project1.mp4",
+    logo: "/assets/project-logo2.png",
+    logoStyle: {
+      backgroundColor: "#2A1816",
+      border: "0.2px solid #36201D",
+      boxShadow: "0px 0px 60px 0px #AA3C304D",
+    },
+    spotlight: "/assets/spotlight1.png",
+    tags: [
+      {
+        id: 1,
+        name: "Next.js",
+        path: "/assets/nextjs.png",
+      },
+      {
+        id: 2,
+        name: "TailwindCSS",
+        path: "assets/tailwindcss.png",
+      },
+      {
+        id: 3,
+        name: "TypeScript",
+        path: "/assets/typescript.png",
+      },
+    ],
+  },
+  {
+    title: "CVdigger",
+    desc: "A web application for creating and customizing professional CVs, built with modern web technologies.",
+    subdesc:
+      "Built as a unique Software-as-a-Service app with Next.js, Tailwind CSS, TypeScript, and Convex, CVDigger is designed for optimal performance and scalability.",
+    href: "https://cvdigger.com/",
+    texture: "/textures/project/project1.mp4",
+    logo: "/assets/project-logo3.png",
+    logoStyle: {
+      backgroundColor: "#2A1816",
+      border: "0.2px solid #36201D",
+      boxShadow: "0px 0px 60px 0px #AA3C304D",
+    },
+    spotlight: "/assets/spotlight1.png",
+    tags: [
+      {
+        id: 1,
+        name: "Next.js",
+        path: "/assets/nextjs.png",
+      },
+      {
+        id: 2,
+        name: "TailwindCSS",
+        path: "assets/tailwindcss.png",
+      },
+      {
+        id: 3,
+        name: "TypeScript",
+        path: "/assets/typescript.png",
+      },
+    ],
+  },
 ];
 
 type Vector3 = [number, number, number];
@@ -96,7 +160,7 @@ type Vector3 = [number, number, number];
 export const calculateSizes = (
   isSmall: boolean,
   isMobile: boolean,
-  isTablet: boolean
+  isTablet: boolean,
 ): {
   deskScale: number;
   deskPosition: Vector3;
@@ -111,31 +175,31 @@ export const calculateSizes = (
     cubePosition: isSmall
       ? [4, -5, 0]
       : isMobile
-      ? [5, -5, 0]
-      : isTablet
-      ? [5, -5, 0]
-      : [9, -5.5, 0],
+        ? [5, -5, 0]
+        : isTablet
+          ? [5, -5, 0]
+          : [9, -5.5, 0],
     reactLogoPosition: isSmall
       ? [3, 4, 0]
       : isMobile
-      ? [5, 4, 0]
-      : isTablet
-      ? [5, 4, 0]
-      : [10, 3, 0],
+        ? [5, 4, 0]
+        : isTablet
+          ? [5, 4, 0]
+          : [10, 3, 0],
     ringPosition: isSmall
-      ? [-5, 7, 0]
+      ? [5, 7, 0]
       : isMobile
-      ? [-10, 10, 0]
-      : isTablet
-      ? [-12, 10, 0]
-      : [-50, 20, 0],
+        ? [-10, 10, 0]
+        : isTablet
+          ? [-12, 10, 0]
+          : [-70, 27, 0],
     targetPosition: isSmall
       ? [-5, -10, -10]
       : isMobile
-      ? [-9, -10, -10]
-      : isTablet
-      ? [-11, -7, -10]
-      : [-13, -13, -10],
+        ? [-9, -10, -10]
+        : isTablet
+          ? [-11, -7, -10]
+          : [-13, -13, -10],
   };
 };
 
