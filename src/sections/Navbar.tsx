@@ -47,8 +47,8 @@ const Navbar = () => {
             <Image
               src={isOpen ? "/assets/close.svg" : "/assets/menu.svg"}
               alt="nemu.svg"
-              height={6}
-              width={6}
+              height={100}
+                width={100}
               className="h-6 w-6"
             />
           </button>

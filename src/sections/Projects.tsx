@@ -47,8 +47,8 @@ const Projects = () => {
               src={currentProject.logo}
               alt="logo"
               className="w-7 h-7 shadow-sm"
-              height={10}
-              width={10}
+              height={100}
+              width={100}
             />
           </div>
           <div className="flex flex-col gap-5 text-white-600 my-5">
@@ -80,8 +80,8 @@ const Projects = () => {
                 src="/assets/arrow-up.png"
                 alt="arrow"
                 className="w-4 h-4"
-                height={4}
-                width={4}
+                height={100}
+                width={100}
               />
             </a>
           </div>
@@ -95,8 +95,8 @@ const Projects = () => {
                 src="/assets/left-arrow.png"
                 alt="left-arrow"
                 className="h-4 w-4"
-                height={4}
-                width={4}
+               height={100}
+                width={100}
               />
             </button>
             <button
@@ -107,8 +107,8 @@ const Projects = () => {
                 src="/assets/right-arrow.png"
                 alt="right-arrow"
                 className="h-4 w-4"
-                height={4}
-                width={4}
+                height={100}
+                width={100}
               />
             </button>
           </div>

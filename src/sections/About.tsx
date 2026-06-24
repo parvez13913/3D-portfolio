@@ -68,7 +68,7 @@ const About = () => {
         {/* Globe Section */}
         <div className="col-span-1 xl:row-span-4">
           <div className="w-full h-full border border-black-300 bg-black-200 rounded-lg sm:p-7 p-4 flex flex-col gap-5">
-            <div className="rounded-3xl w-full h-[326px] flex justify-center items-center">
+            <div className="rounded-3xl w-full h-81.5 flex justify-center items-center">
               <Globe
                 width={300}
                 height={300}
@@ -115,7 +115,7 @@ const About = () => {
               alt="grid-3"
               height={400}
               width={400}
-              className="w-full sm:h-[266px] h-fit object-contain"
+              className="w-full sm:h-66.5 h-fit object-contain"
               priority
             />
             <div>

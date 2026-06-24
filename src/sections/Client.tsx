@@ -21,6 +21,8 @@ const Client = () => {
                     src={img}
                     alt="image"
                     className="w-12 h-12 rounded-full"
+                    height={100}
+                    width={100}
                   />
 
                   <div className="flex flex-col">
@@ -40,6 +42,8 @@ const Client = () => {
                       src="/assets/star.png"
                       alt="star"
                       className="w-5 h-5"
+                      height={100}
+                      width={100}
                     />
                   ))}
                 </div>

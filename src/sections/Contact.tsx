@@ -21,7 +21,7 @@ const Contact = () => {
   const [loading, setLoading] = useState(false);
 
   const handleChange = (
-    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
     const { name, value } = e.target;
 
@@ -45,7 +45,7 @@ const Contact = () => {
         },
         {
           publicKey: process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY,
-        }
+        },
       );
 
       setLoading(false);
@@ -65,6 +65,8 @@ const Contact = () => {
           src="/assets/terminal.png"
           alt="terminal"
           className="absolute inset-0 min-h-screen"
+          height={100}
+          width={100}
         />
 
         <div className="max-w-xl relative z-10 sm:px-10 px-5 mt-24">
@@ -129,8 +131,8 @@ const Contact = () => {
               <Image
                 src="/assets/arrow-up.png"
                 alt="arrow-up"
-                height={5}
-                width={5}
+                height={100}
+                width={100}
                 className="w-2.5 h-2.5 object-contain invert brightness-0"
               />
             </button>

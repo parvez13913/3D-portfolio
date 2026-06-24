@@ -15,7 +15,13 @@ const Footer = () => {
           rel="noopener noreferrer"
           className="w-12 h-12 rounded-full flex justify-center items-center bg-black-300 border border-black-200 cursor-pointer"
         >
-          <Image src="/assets/github.svg" alt="github" className="w-1/2 h-1/2" />
+          <Image
+            src="/assets/github.svg"
+            alt="github"
+            className="w-1/2 h-1/2"
+            height={100}
+                width={100}
+          />
         </a>
 
         <a
@@ -24,7 +30,13 @@ const Footer = () => {
           rel="noopener noreferrer"
           className="w-12 h-12 rounded-full flex justify-center items-center bg-black-300 border border-black-200 cursor-pointer"
         >
-          <Image src="/assets/twitter.svg" alt="github" className="w-1/2 h-1/2" />
+          <Image
+            src="/assets/twitter.svg"
+            alt="github"
+            className="w-1/2 h-1/2"
+            height={100}
+                width={100}
+          />
         </a>
         <a
           href="https://www.instagram.com/parvez13913/"
@@ -36,6 +48,8 @@ const Footer = () => {
             src="/assets/instagram.svg"
             alt="github"
             className="w-1/2 h-1/2"
+            height={100}
+            width={100}
           />
         </a>
       </div>
