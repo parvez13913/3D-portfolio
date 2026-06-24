@@ -2,12 +2,16 @@
 "use client";
 
 import CanvasLoader from "@/components/CanvasLoader";
-import { DemoComputer } from "@/components/DemoComputer";
 import { myProjects } from "@/constans";
 import { Center, OrbitControls } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
+import dynamic from "next/dynamic";
 import Image from "next/image";
 import { Suspense, useState } from "react";
+const DemoComputer = dynamic(
+  () => import("@/components/DemoComputer").then((mod) => mod.DemoComputer),
+  { ssr: false, loading: () => <CanvasLoader /> },
+);
 
 const Projects = () => {
   const [selectedProjectIndex, setSelectedProjectIndex] = useState(0);
@@ -95,7 +99,7 @@ const Projects = () => {
                 src="/assets/left-arrow.png"
                 alt="left-arrow"
                 className="h-4 w-4"
-               height={100}
+                height={100}
                 width={100}
               />
             </button>

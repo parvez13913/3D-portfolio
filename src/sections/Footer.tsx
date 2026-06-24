@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 
 const Footer = () => {
@@ -20,7 +21,7 @@ const Footer = () => {
             alt="github"
             className="w-1/2 h-1/2"
             height={100}
-                width={100}
+            width={100}
           />
         </a>
 
@@ -35,7 +36,7 @@ const Footer = () => {
             alt="github"
             className="w-1/2 h-1/2"
             height={100}
-                width={100}
+            width={100}
           />
         </a>
         <a

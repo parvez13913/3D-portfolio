@@ -1,3 +1,4 @@
+"use client";
 import { clientReviews } from "@/constans";
 import Image from "next/image";
 
