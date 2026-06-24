@@ -34,7 +34,7 @@ const Projects = () => {
             <Image
               src={currentProject.spotlight}
               alt="spotlight"
-              className="w-full h-[96px] object-cover rounded-xl"
+              className="w-full h-24 object-cover rounded-xl"
               height={400}
               width={400}
             />

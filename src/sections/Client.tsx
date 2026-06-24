@@ -1,4 +1,5 @@
 import { clientReviews } from "@/constans";
+import Image from "next/image";
 
 const Client = () => {
   return (
@@ -16,7 +17,7 @@ const Client = () => {
               <p className="text-white font-light font-serif">{review}</p>
               <div className="flex lg:flex-row flex-col justify-between lg:items-center items-start gap-5 mt-7">
                 <div className="flex gap-3">
-                  <img
+                  <Image
                     src={img}
                     alt="image"
                     className="w-12 h-12 rounded-full"
@@ -34,7 +35,7 @@ const Client = () => {
 
                 <div className="flex self-end items-center gap-2">
                   {Array.from({ length: 5 }).map((_, index) => (
-                    <img
+                    <Image
                       key={index}
                       src="/assets/star.png"
                       alt="star"

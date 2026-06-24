@@ -61,7 +61,7 @@ const Contact = () => {
   return (
     <section className="sm:px-10 px-5 my-20" id="contact">
       <div className="relative min-h-screen flex items-center justify-center flex-col">
-        <img
+        <Image
           src="/assets/terminal.png"
           alt="terminal"
           className="absolute inset-0 min-h-screen"
